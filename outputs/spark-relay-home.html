@@ -19,7 +19,7 @@
       radial-gradient(circle at 78% 12%, rgba(255, 181, 84, 0.11), transparent 22rem),
       linear-gradient(135deg, #080706 0%, var(--coal) 42%, #1a100b 100%);
     font-family: "Microsoft YaHei UI", "PingFang SC", "Noto Sans CJK SC", sans-serif;
-    overflow: hidden;
+    overflow-x: hidden;
     position: relative;
     isolation: isolate;
   }
@@ -61,7 +61,7 @@
     margin: 0 auto;
     padding: 32px 0 28px;
     display: grid;
-    grid-template-rows: auto 1fr auto;
+    grid-template-rows: auto auto auto auto;
     gap: 20px;
   }
 
@@ -403,6 +403,157 @@
     overflow-wrap: anywhere;
   }
 
+  .spark-home .usage-guide {
+    display: grid;
+    grid-template-columns: minmax(0, 0.96fr) minmax(320px, 0.88fr);
+    gap: 16px;
+    margin-top: 8px;
+    padding-bottom: 8px;
+  }
+
+  .spark-home .usage-panel,
+  .spark-home .request-panel {
+    border: 1px solid rgba(255, 208, 106, 0.18);
+    border-radius: 8px;
+    background:
+      linear-gradient(140deg, rgba(255, 106, 26, 0.12), rgba(255, 208, 106, 0.035)),
+      rgba(10, 8, 6, 0.76);
+    backdrop-filter: blur(16px);
+    box-shadow: 0 20px 46px rgba(0, 0, 0, 0.18);
+  }
+
+  .spark-home .usage-panel {
+    padding: 22px;
+  }
+
+  .spark-home .section-kicker {
+    margin: 0 0 8px;
+    color: #f8c878;
+    font-size: 0.72rem;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  .spark-home .usage-panel h2,
+  .spark-home .request-panel h2 {
+    margin: 0;
+    color: #fff1cf;
+    font-size: 1.64rem;
+    line-height: 1.14;
+  }
+
+  .spark-home .usage-summary {
+    margin: 10px 0 0;
+    color: #d9c8b1;
+    font-size: 0.92rem;
+    line-height: 1.75;
+  }
+
+  .spark-home .usage-steps {
+    display: grid;
+    gap: 10px;
+    margin: 18px 0 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .spark-home .usage-steps li {
+    display: grid;
+    grid-template-columns: 38px 1fr;
+    gap: 12px;
+    align-items: start;
+    padding: 13px;
+    border: 1px solid rgba(255, 208, 106, 0.14);
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.035);
+  }
+
+  .spark-home .step-no {
+    display: grid;
+    place-items: center;
+    width: 38px;
+    height: 38px;
+    border-radius: 8px;
+    color: #261208;
+    font-weight: 900;
+    background: linear-gradient(135deg, var(--gold), var(--ember));
+    box-shadow: 0 0 18px rgba(255, 106, 26, 0.34);
+  }
+
+  .spark-home .step-title {
+    display: block;
+    color: #ffe7ad;
+    font-size: 0.98rem;
+    font-weight: 900;
+    line-height: 1.25;
+  }
+
+  .spark-home .step-copy {
+    display: block;
+    margin-top: 5px;
+    color: var(--muted);
+    font-size: 0.82rem;
+    line-height: 1.55;
+  }
+
+  .spark-home .request-panel {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    padding: 20px;
+  }
+
+  .spark-home .code-window {
+    margin: 16px 0 0;
+    border: 1px solid rgba(255, 208, 106, 0.16);
+    border-radius: 8px;
+    overflow: hidden;
+    background: #070504;
+  }
+
+  .spark-home .code-bar {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    padding: 10px 12px;
+    border-bottom: 1px solid rgba(255, 208, 106, 0.12);
+    color: #cdbda9;
+    font-size: 0.72rem;
+  }
+
+  .spark-home .code-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--ember);
+    box-shadow: 14px 0 0 var(--gold), 28px 0 0 #b36d3f;
+    margin-right: 28px;
+  }
+
+  .spark-home pre {
+    margin: 0;
+    padding: 15px;
+    color: #ffe8b7;
+    font-size: 0.78rem;
+    line-height: 1.6;
+    overflow-x: auto;
+  }
+
+  .spark-home code {
+    font-family: "Cascadia Code", Consolas, "Courier New", monospace;
+  }
+
+  .spark-home .usage-note {
+    margin: 14px 0 0;
+    padding: 12px 13px;
+    border-left: 3px solid var(--ember);
+    border-radius: 6px;
+    color: #d8c5aa;
+    background: rgba(255, 106, 26, 0.08);
+    font-size: 0.82rem;
+    line-height: 1.58;
+  }
+
   @keyframes spark-drift {
     from { transform: translate3d(0, 0, 0); }
     to { transform: translate3d(-4rem, 2rem, 0); }
@@ -489,6 +640,10 @@
     .spark-home .metrics {
       grid-template-columns: 1fr;
     }
+
+    .spark-home .usage-guide {
+      grid-template-columns: 1fr;
+    }
   }
 
   @media (max-width: 520px) {
@@ -528,6 +683,26 @@
 
     .spark-home .btn {
       width: 100%;
+    }
+
+    .spark-home .usage-panel,
+    .spark-home .request-panel {
+      padding: 16px;
+    }
+
+    .spark-home .usage-panel h2,
+    .spark-home .request-panel h2 {
+      font-size: 1.34rem;
+    }
+
+    .spark-home .usage-steps li {
+      grid-template-columns: 32px 1fr;
+      padding: 11px;
+    }
+
+    .spark-home .step-no {
+      width: 32px;
+      height: 32px;
     }
   }
 
@@ -637,6 +812,61 @@
         <strong>星火优燃</strong>
         <span>透明阶梯低价计费，无隐形扣费，用更低成本点燃你的 AI 业务。</span>
       </article>
+    </section>
+
+    <section class="usage-guide" aria-label="使用说明">
+      <div class="usage-panel">
+        <p class="section-kicker">Quick Start</p>
+        <h2>使用说明</h2>
+        <p class="usage-summary">
+          星火中转站用于把业务侧请求稳定转发到大模型服务。准备好密钥后，只需要把原有模型调用地址替换为中转地址，即可接入统一鉴权、计费和节点状态能力。
+        </p>
+        <ol class="usage-steps">
+          <li>
+            <span class="step-no">01</span>
+            <span>
+              <strong class="step-title">获取 API Key</strong>
+              <span class="step-copy">进入控制台创建访问密钥，并按项目或环境区分生产、测试调用。</span>
+            </span>
+          </li>
+          <li>
+            <span class="step-no">02</span>
+            <span>
+              <strong class="step-title">配置转发地址</strong>
+              <span class="step-copy">将客户端 Base URL 指向星火中转站地址，保留兼容的模型名称与请求参数。</span>
+            </span>
+          </li>
+          <li>
+            <span class="step-no">03</span>
+            <span>
+              <strong class="step-title">发起模型请求</strong>
+              <span class="step-copy">在请求头携带 Bearer Token，即可通过稳定节点转发对话、补全或多模态请求。</span>
+            </span>
+          </li>
+        </ol>
+      </div>
+
+      <div class="request-panel">
+        <div>
+          <p class="section-kicker">API Example</p>
+          <h2>接口调用示例</h2>
+        </div>
+        <div class="code-window">
+          <div class="code-bar"><span class="code-dot" aria-hidden="true"></span><span>curl request</span></div>
+          <pre><code>curl https://spark-relay.example.com/v1/chat/completions \
+  -H "Authorization: Bearer YOUR_API_KEY" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "model": "gpt-4o-mini",
+    "messages": [
+      { "role": "user", "content": "点燃一个稳定的 AI 请求" }
+    ]
+  }'</code></pre>
+        </div>
+        <p class="usage-note">
+          建议在服务端保存密钥，不要把 API Key 暴露到浏览器前端；上线前可先打开节点状态页确认可用区与延迟。
+        </p>
+      </div>
     </section>
   </main>
 </section>
