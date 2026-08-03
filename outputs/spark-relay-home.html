@@ -366,9 +366,9 @@
     left: 55%;
     transform: translate(-50%, -50%);
     border-radius: 50%;
-    background: radial-gradient(circle, rgba(255, 182, 76, 0.2), rgba(255, 106, 26, 0.12) 38%, transparent 70%);
-    filter: blur(10px);
-    opacity: 0.86;
+    background: radial-gradient(circle, rgba(255, 167, 43, 0.14), rgba(227, 78, 15, 0.08) 38%, transparent 70%);
+    filter: blur(16px) saturate(1.08);
+    opacity: 0.72;
     animation: spark-signal-glow 4.8s ease-in-out infinite;
     z-index: -2;
   }
@@ -380,7 +380,7 @@
     top: 50%;
     left: 55%;
     transform: translate(-50%, -50%);
-    border: 1px solid rgba(255, 190, 89, 0.2);
+    border: 1px solid rgba(229, 157, 43, 0.16);
     border-radius: 50%;
     box-shadow: 0 0 50px rgba(255, 106, 26, 0.1);
     z-index: -1;
@@ -391,13 +391,13 @@
     content: "";
     position: absolute;
     inset: 48px;
-    border: 1px solid rgba(255, 208, 106, 0.19);
+    border: 1px solid rgba(229, 166, 49, 0.15);
     border-radius: 50%;
   }
 
   .spark-home .signal-orbit::after {
     inset: 98px;
-    border-color: rgba(255, 106, 26, 0.24);
+    border-color: rgba(217, 75, 17, 0.2);
   }
 
   .spark-home .relay-link {
@@ -408,8 +408,8 @@
     height: 1px;
     transform-origin: left center;
     transform: rotate(var(--angle));
-    background: linear-gradient(90deg, rgba(255, 188, 84, 0.02), rgba(255, 188, 84, 0.28), rgba(255, 106, 26, 0.02));
-    opacity: 0.72;
+    background: linear-gradient(90deg, rgba(240, 157, 38, 0.02), rgba(240, 157, 38, 0.2), rgba(224, 76, 15, 0.02));
+    opacity: 0.62;
     z-index: -1;
   }
 
@@ -441,10 +441,10 @@
   .spark-home .stack-layer {
     position: absolute;
     inset: 20px 0 0;
-    border: 1px solid rgba(255, 212, 125, 0.42);
+    border: 1px solid rgba(234, 173, 67, 0.34);
     border-radius: 18px;
-    background: linear-gradient(145deg, rgba(255, 215, 142, 0.34), rgba(255, 106, 26, 0.22) 56%, rgba(83, 22, 10, 0.75));
-    box-shadow: inset 0 1px rgba(255, 250, 218, 0.28), 0 20px 32px rgba(255, 76, 11, 0.18);
+    background: linear-gradient(145deg, rgba(255, 194, 71, 0.22), rgba(213, 83, 18, 0.18) 56%, rgba(70, 18, 8, 0.82));
+    box-shadow: inset 0 1px rgba(255, 225, 145, 0.18), 0 20px 32px rgba(210, 59, 8, 0.16);
     transform: translateY(var(--layer-y)) scale(var(--layer-scale));
     opacity: var(--layer-opacity);
   }
@@ -458,16 +458,16 @@
     align-content: start;
     gap: 14px;
     padding: 18px;
-    background: linear-gradient(145deg, rgba(255, 234, 175, 0.6), rgba(255, 147, 43, 0.42) 45%, rgba(108, 28, 11, 0.94));
-    box-shadow: inset 0 1px rgba(255, 255, 238, 0.44), 0 0 38px rgba(255, 130, 38, 0.42), 0 20px 36px rgba(30, 5, 0, 0.42);
+    background: linear-gradient(145deg, rgba(255, 205, 83, 0.42), rgba(231, 113, 25, 0.34) 45%, rgba(91, 22, 9, 0.96));
+    box-shadow: inset 0 1px rgba(255, 237, 158, 0.26), 0 0 38px rgba(224, 98, 19, 0.3), 0 20px 36px rgba(30, 5, 0, 0.46);
   }
 
   .spark-home .stack-label {
     width: 58px;
     height: 12px;
     border-radius: 999px;
-    background: rgba(255, 247, 214, 0.6);
-    box-shadow: 0 0 15px rgba(255, 240, 186, 0.38);
+    background: rgba(255, 220, 112, 0.48);
+    box-shadow: 0 0 15px rgba(255, 192, 57, 0.28);
   }
 
   .spark-home .stack-bars {
@@ -479,7 +479,7 @@
     display: block;
     height: 5px;
     border-radius: 999px;
-    background: rgba(255, 246, 212, 0.64);
+    background: rgba(255, 222, 124, 0.52);
   }
 
   .spark-home .stack-bars span:nth-child(2) { width: 72%; opacity: 0.7; }
@@ -611,8 +611,8 @@
     border-radius: 50%;
     color: #3b1607;
     font-weight: 900;
-    background: linear-gradient(145deg, #fff0b9, #ff8f2e);
-    box-shadow: 0 0 16px rgba(255, 167, 52, 0.45);
+    background: linear-gradient(145deg, #ffd75a, #e96c1c);
+    box-shadow: 0 0 16px rgba(228, 117, 25, 0.34);
   }
 
   .spark-home .node-1 { top: 1%; left: 39%; animation-delay: -0.4s; }
