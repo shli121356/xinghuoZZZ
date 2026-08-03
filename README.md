@@ -7,6 +7,7 @@
 - 首页：`outputs/spark-relay-home.html`
 - 首页预览：`outputs/spark-relay-home-preview.png`
 - 使用文档：`docs/USAGE.md`
+- 更新记录：`CHANGELOG.md`
 
 ## 本地运行
 
@@ -50,6 +51,16 @@ curl https://zz.ncriscs.com/v1/chat/completions \
 ```
 
 不要把 API Key 写入浏览器前端或提交到代码仓库。完整接入步骤见 [`docs/USAGE.md`](docs/USAGE.md)。
+
+## 更新内容
+
+- 首页主视觉改为中心层叠中转节点、请求面板和环绕能力节点。
+- 全页加入低对比度的金黄热雾，光晕向页面中部扩散，并使用缓慢的火焰式漂移动画。
+- 右侧视觉统一为更深的金黄、橙金和火芯橙，降低浅色和偏冷观感。
+- 首页入口、API 示例和使用文档已统一使用 `https://zz.ncriscs.com`。
+- 最新界面截图已同步到 `outputs/spark-relay-home-preview.png`。
+
+详细记录见 [`CHANGELOG.md`](CHANGELOG.md)。
 
 ## 界面展示
 
