@@ -3,7 +3,7 @@
 **Spark Relay**  
 节点已点燃 · Ready
 
-![星火中转站首页预览](http://localhost:8000/spark-relay-home-preview.png)
+![星火中转站首页预览](https://shli121356.github.io/xinghuoZZZ/outputs/spark-relay-home-preview.png)
 
 ## 把星火稳稳接住，让火种燃通 AI 长路
 
@@ -78,4 +78,4 @@ curl https://zz.ncriscs.com/v1/chat/completions \
 
 ## 首页预览
 
-[打开完整首页](http://localhost:8000/spark-relay-home.html?logo=56)
+[打开完整首页](https://shli121356.github.io/xinghuoZZZ/)
