@@ -17,7 +17,7 @@
 python -m http.server 8000 --directory outputs
 ```
 
-打开 <http://127.0.0.1:8000/spark-relay-home.html> 查看首页。
+打开 <https://shli121356.github.io/xinghuoZZZ/> 查看线上首页。
 
 ## 首页入口
 
